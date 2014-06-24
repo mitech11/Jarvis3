@@ -1,0 +1,79 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- MIB: Not saving logs currently -->
+     <!--   <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_logs"
+        android:summary="@string/pref_logs_summary"
+        android:title="@string/pref_logs"/> -->
+    
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_autodecline_summary"
+        android:summary="@string/pref_autodecline_summary"
+        android:title="@string/pref_autodecline" />
+    
+     
+     <EditTextPreference
+        android:inputType="textMultiLine"
+        android:key="pref_custom_sms"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/pref_customSMS_summary"
+        android:title="@string/pref_customSMS" />
+    
+     <!-- MIB: Not reading sms currently -->
+   <!--  <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_readSMS"
+        android:summary="@string/pref_read_SMS_summary"
+        android:title="@string/pref_read_SMS" /> -->
+    
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_readCaller"
+        android:summary="@string/pref_callerID_summary"
+        android:title="@string/pref_callerID" />
+    
+  
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_maxSpeedAlarm"
+        android:summary="@string/pref_maxSpeedalarm_summary"
+        android:title="@string/pref_maxSpeed_alarm" />
+    
+     <!-- <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_cityChange"
+        android:summary="@string/pref_cityChng_summary"
+        android:title="@string/pref_cityChng" /> -->
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:inputType="number"
+        android:key="pref_maxSpeedLimit"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="50"
+        android:summary="@string/pref_max_speedLimit_summary"
+        android:title="@string/pref_max_speedLimit" />
+   
+
+    <!--
+         NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it.
+    -->
+    <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+    <ListPreference
+        android:defaultValue="-1"
+        android:entries="@array/pref_example_list_titles"
+        android:entryValues="@array/pref_example_list_values"
+        android:key="example_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_add_friends_to_messages" />
+
+</PreferenceScreen>

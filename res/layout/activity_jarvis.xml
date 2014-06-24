@@ -1,0 +1,32 @@
+<android.support.v4.widget.DrawerLayout
+	xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/drawer_layout"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<FrameLayout android:id="@+id/content_frame"
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+		
+	<LinearLayout android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button android:id="@+id/button1" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:onClick="startService"
+			android:text="Start Service" />
+
+		<Button android:id="@+id/button2" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:onClick="stopService"
+			android:text="Stop Service" />
+
+		<Button android:id="@+id/button3" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:onClick="saveParkedLocation"
+			android:text="Save Parking Location " />
+
+
+		<Button android:id="@+id/button4" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:onClick="showParkedLocation"
+			android:text="Show Parked Location" />
+    </LinearLayout>
+		
+	</FrameLayout>
+	<ListView android:id="@+id/left_drawer" android:layout_width="240dip"
+		android:layout_height="match_parent" android:layout_gravity="start"
+		android:choiceMode="singleChoice" android:background="#111"></ListView>
+</android.support.v4.widget.DrawerLayout>
